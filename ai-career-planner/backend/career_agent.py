@@ -52,7 +52,7 @@ model_name = 'openai:xiaomi/mimo-v2-flash' # Fallback to standard OpenAI compati
 # I will use EXACTLY what they asked for, but I will also ensure base_url is set in main.py or env.
 
 agent = Agent(
-    model='openai:xiaomi/mimo-v2-flash', # Using openai: prefix which is standard for compatible APIs, assuming base_url is set. If Pydantic AI has specific openrouter support, I might use that, but 'openai:' with base_url is safest standard. 
+    # Using openai: prefix which is standard for compatible APIs, assuming base_url is set. If Pydantic AI has specific openrouter support, I might use that, but 'openai:' with base_url is safest standard. 
     # WAIT, User explicitly said: model="openrouter/xiaomi/mimo-v2-flash"
     # I should try to honor that if it's a known convention or if they want me to use that string.
     # But usually 'openai:modelname' is how we use other providers.
@@ -78,3 +78,4 @@ agent = Agent(
         "Focus on free, high-quality resources."
     ),
 )
+
