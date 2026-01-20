@@ -70,7 +70,7 @@ agent = Agent(
     # Let's assume the safe bet is configuring the base_url.
     # But I will add retries.
     retries=2,
-    result_type=CareerRoadmap,
+    output_type=CareerRoadmap,
     system_prompt=(
         "You are an expert tech career counselor. "
         "Create a detailed, actionable 4-week study plan based on the user's profile. "
@@ -78,5 +78,6 @@ agent = Agent(
         "Focus on free, high-quality resources."
     ),
 )
+
 
 
