@@ -66,7 +66,7 @@ agent = Agent(
     # Correction: The user said "openrouter/xiaomi/mimo-v2-flash" in the Agent constructor. 
     # I will use that string.
     
-    model='openrouter/xiaomi/mimo-v2-flash',
+   model='openai:xiaomi/mimo-v2-flash',
     # Let's assume the safe bet is configuring the base_url.
     # But I will add retries.
     retries=2,
@@ -78,4 +78,5 @@ agent = Agent(
         "Focus on free, high-quality resources."
     ),
 )
+
 
