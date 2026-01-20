@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import CareerForm from "@/components/CareerForm";
-import RoadmapDisplay from "@/components/RoadmapDisplay";
+import CareerForm from "../components/CareerForm";
+import RoadmapDisplay from "../components/RoadmapDisplay";
 import { CareerProfile, CareerRoadmap } from "@/lib/types";
 import { AlertCircle, Rocket } from "lucide-react";
 
