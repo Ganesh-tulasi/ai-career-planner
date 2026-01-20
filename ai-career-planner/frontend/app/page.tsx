@@ -3,7 +3,7 @@
 import { useState } from "react";
 import CareerForm from "../components/CareerForm";
 import RoadmapDisplay from "../components/RoadmapDisplay";
-import { CareerProfile, CareerRoadmap } from "@/lib/types";
+import { CareerProfile, CareerRoadmap } from "../lib/types";
 import { AlertCircle, Rocket } from "lucide-react";
 
 export default function Home() {
@@ -17,14 +17,17 @@ export default function Home() {
     setRoadmap(null);
 
     try {
-      const response = await fetch("http://localhost:8000/api/career-plan", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(profile),
-      });
-
+      const response = await fetch(
+  `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/career-plan`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(profile),
+  }
+);
+      
       if (!response.ok) {
         throw new Error("Failed to generate plan. Please try again.");
       }
